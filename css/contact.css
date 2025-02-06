@@ -1,0 +1,73 @@
+/* ბეისიქ სტილები */
+body {
+    font-family: sans-serif; 
+    margin: 0;
+    background-color: #111; 
+    color: #eee; 
+}
+
+
+.contact-section {
+    font-family: sans-serif; 
+    font-family: sans-serif; 
+    width: 50%;
+    color: #eee;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #111;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px;
+}
+
+h2 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+.input-group {
+    margin: 15px 0;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #ff4500;
+}
+
+#form-message {
+    margin-top: 15px;
+    font-size: 14px;
+    color: green;
+}
