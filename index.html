@@ -188,32 +188,7 @@
 
 <button id="scrollToTopBtn">↑</button>
 
-<script>
-// Instagram Media Fetching Code
-const userId = 'vk.ubilava'; 
-const accessToken = 'vk.ubilava';  
 
-const mediaUrl = `https://graph.instagram.com/${vk.ubilava}/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink&access_token=${accessToken}`;
-
-fetch(mediaUrl)
-  .then(response => response.json())
-  .then(data => {
-    const container = document.createElement('div'); 
-    container.classList.add('instagram-media-container'); 
-    document.body.appendChild(container);
-
-    data.data.forEach(item => {
-      const mediaElement = document.createElement('div');
-      const imageElement = document.createElement('img');
-      imageElement.src = item.media_url; 
-      mediaElement.appendChild(imageElement);
-      container.appendChild(mediaElement); 
-    });
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
-</script>
 
 <script src="js/home.js"></script>
 </body>

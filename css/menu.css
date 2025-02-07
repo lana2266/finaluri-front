@@ -11,16 +11,16 @@
     border-radius: 8px;
 }
 
-/* Main background of the page */
+
 body {
-    background-color: #111; /* Dark black background */
-    color: white; /* White text for the whole page */
+    background-color: #111;
+    color: white; 
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Container for the recipes */
+
 #recipes-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -29,10 +29,9 @@ body {
     justify-items: center;
 }
 
-/* Style for each recipe card */
 .recipe-card {
-    background-color: #222; /* Lighter black (dark grey) for recipe cards */
-    border: 1px solid #333; /* Dark border to separate cards */
+    background-color: #222; 
+    border: 1px solid #333;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -42,36 +41,35 @@ body {
     text-align: center;
 }
 
-/* Hover effect for the recipe card */
 .recipe-card:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Style for the image */
+
 .recipe-card img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-bottom: 1px solid #333; /* Dark border below the image */
+    border-bottom: 1px solid #333;
 }
 
-/* Style for the recipe title */
+
 .recipe-card h3 {
     font-size: 1.2rem;
-    color: white; /* White text for the title */
+    color: white; 
     margin: 10px 0;
     padding: 0 10px;
 }
 
-/* Style for the description text */
+
 .recipe-card p {
-    color: #ddd; /* Light grey text for description */
+    color: #ddd; 
     font-size: 0.9rem;
     padding: 0 10px;
 }
 
-/* Style for the link button */
+
 .recipe-card a {
     display: inline-block;
     margin: 10px 0;
@@ -88,7 +86,7 @@ body {
     background-color: #e28a00;
 }
 
-/* Style for the footer and other elements if necessary */
+
 footer {
     background-color: #222;
     padding: 20px;

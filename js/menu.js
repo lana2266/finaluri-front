@@ -1,19 +1,13 @@
-// document.addEventListener("DOMContentLoaded", function() {
-
-//     document.getElementById("menuButton").addEventListener("click", function() {
-//         window.location.href = "menu.html";
-//     });
-// });
 
 
-const apiKey = '0e038ff2563e4d47a5854073fba118b9'; // Replace with your actual API key
+const apiKey = '0e038ff2563e4d47a5854073fba118b9'; 
 const apiUrl = `https://api.spoonacular.com/recipes/random?number=10&apiKey=${apiKey}`;
 
 async function fetchRecipes() {
     try {
         const response = await fetch(apiUrl);
         if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`); // Corrected string interpolation
+            throw new Error(`HTTP error! Status: ${response.status}`); 
         }
         const data = await response.json();
         displayRecipes(data.recipes);
@@ -25,7 +19,7 @@ async function fetchRecipes() {
 
 function displayRecipes(recipes) {
     const container = document.getElementById('recipes-container');
-    container.innerHTML = ''; // Clear any existing content
+    container.innerHTML = '';
 
     recipes.forEach(recipe => {
         const recipeCard = `
@@ -35,10 +29,9 @@ function displayRecipes(recipes) {
                 <a href="${recipe.sourceUrl}" target="_blank">View Recipe</a>
             </div>
         `;
-        container.innerHTML += recipeCard; // Append the recipe card to the container
+        container.innerHTML += recipeCard; 
     });
 }
 
-// Call the function when the page loads
 fetchRecipes();
 
