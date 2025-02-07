@@ -4,147 +4,217 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foodtuck</title>
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
+    <style>
+        .instagram-media-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .instagram-media-container div {
+            width: 250px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .instagram-media-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Foodtuck</div>
-            <div class="burger-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
 
-            </ul>
-        </nav>
-        <div class="hero">
-            <div class="hero-content">
-                <h1>The Art of Speed Food Quality</h1>
-                <p>At FoodTuck, we believe that food is more than just a meal—it's an experience! Whether you're craving a quick bite, a gourmet feast, or a refreshing drink, we have something special just for you.</p>
-                <button > <a href="rate-us.html" class="rate-us-button">Rate Us</a></button>
-            </div>
-            <img src="images/mainpic.png" alt="Front Image" class="hero-image"> </div>
-    </header>
-
-    <section class="about-us">
-        <h2>About Us</h2>
-        <p>We Create the best foody product</p>
-        <p>At FoodTuck, we are passionate about bringing people together through great food. Our journey began with a simple idea: to serve delicious, high-quality meals that satisfy every craving.
-
-            We take pride in using fresh ingredients, crafting each dish with love, and delivering an unforgettable dining experience. Whether you’re in the mood for a quick snack, a hearty meal, or a sweet treat, we’ve got something for everyone!</p>
-
-        <button>Read More</button>
-        <div class="about-images">
-            <img src="images/aboutus.png" alt="About Image 1">
-            <img src="images/aboutus2.png" alt="About Image 2">
-            <img src="images/aboutus3.png" alt="About Image 3">
+<header id="header">
+    <nav>
+        <div class="logo">
+        <h1> Foodtuck</h1>
         </div>
-    </section>
-
-    <section class="food-category">
-        <h2>Choose Food Item</h2>
-        <p>At FoodTuck, we believe that great food brings joy! Explore our menu and pick from a variety of delicious, freshly prepared dishes that satisfy every craving. Whether you're in the mood for something savory, sweet, or refreshing, we’ve got something just for you!</p>
-        <div class="food-grid">
-            <div class="food-item">
-                <img src="images/1food.png" alt="Food Item 1">
-                <p>Burgers <br> <br> Juicy, flavorful, and made to perfection</p>
-            </div>
-            <div class="food-item">
-                <img src="images/food2.png" alt="Food Item 2">
-                <p>Pizza <br> <br> Crispy, cheesy, and simply irresistible</p>
-            </div>
-            <div class="food-item">
-                <img src="images/food3.png" alt="Food Item 3">
-                <p>Salads <br> <br> Fresh, healthy, and full of goodness</p>
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
-    </section>
-
-    <section class="why-choose-us">
-        <h2>Why Choose Us?</h2>
-        <p>Extraordinary taste and Experienced Team</p>
-        <ul>
-            <li>Fresh & Tasty Ingredients 🌿</li>
-            <li>Experienced Chefs 👨‍🍳</li>
-            <li>A Menu for Every Mood 🍔🥗🍕</li>
-            <li>Fast & Friendly Service 🚀</li>
-
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="why-choose-grid">
-            <div class="why-choose-item">
-                <img src="images/choosus1.png" alt="Fast Food Icon">
-                <p>Fast Food</p>
-            </div>
-            <div class="why-choose-item">
-                <img src="images/choosus3.png" alt="Lunch Icon">
-                <p>Lunch</p>
-            </div>
-            <div class="why-choose-item">
-                <img src="images/choosus2.png" alt="Dinner Icon">
-                <p>Dinner</p>
-            </div>
+    </nav>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>The Art of Speed Food Quality</h1>
+            <p>At FoodTuck, we believe that food is more than just a meal—it's an experience!</p>
+            <button><a href="rate-us.html" class="rate-us-button">Rate Us</a></button>
         </div>
-    </section>
+        <img src="images/mainpic.png" alt="Front Image" class="hero-image">
+    </div>
+</header>
 
-    <section class="stats">
-        <div class="stat-item">
-            <p>Professional Chefs</p>
-            <p>420</p>
-        </div>
-        <div class="stat-item">
-            <p>Items of Food</p>
-            <p>320</p>
-        </div>
-        <div class="stat-item">
-            <p>Years of Experienced</p>
-            <p>30+</p>
-        </div>
-        <div class="stat-item">
-            <p>Happy Customers</p>
-            <p>220</p>
-        </div>
-    </section>
+<div id="cookie-notification">
+    <p>We use cookies! <button id="accept-cookie">Accept</button></p>
+</div>
 
-    <section class="chefs">
-        <h2>Meet Our Chefs – The Masters Behind the Flavor 👨‍🍳✨</h2>
-        <p>At FoodTuck, our chefs are more than just cooks—they are artists, innovators, and food lovers who bring passion to every dish. </p>
-        <div class="chef-grid">
-            <div class="chef-item">
-                <img src="images/chef1.png" alt="Chef 1">
-                <h3>D.Estwood</h3>
-            <script src="script.js"></script>
+<section class="about-us">
+    <h2>About Us</h2>
+    <p>We Create the best foody product</p>
+    <p>At FoodTuck, we are passionate about bringing people together through great food...</p>
+    <button id="readMoreBtn">Read More</button>
+
+    <div class="about-images">
+        <img src="images/aboutus.png" alt="About Image 1">
+        <img src="images/aboutus2.png" alt="About Image 2">
+        <img src="images/aboutus3.png" alt="About Image 3">
+    </div>
+</section>
+
+<section class="food-category">
+    <h2> Choose Food Item </h2>
+    <div class="food-grid">
+        <div class="food-item">
+            <img src="images/1food.png" alt="Food Item 1">
+            <p>Burgers <br> <br> Juicy, flavorful, and made to perfection</p>
         </div>
-        <div class="chef-item">
-            <img src="images/chef2.png" alt="Chef 2">
-            <h3>J. Doe</h3>
+        <div class="food-item">
+            <img src="images/food2.png" alt="Food Item 2">
+            <p>Pizza <br> <br> Crispy, cheesy, and simply irresistible</p>
         </div>
-        <div class="chef-item">
-            <img src="images/chef3.png" alt="Chef 3">
-            <h3>A. Smith</h3>
+        <div class="food-item">
+            <img src="images/food3.png" alt="Food Item 3">
+            <p>Salads <br> <br> Fresh, healthy, and full of goodness</p>
         </div>
     </div>
 </section>
 
+<section class="why-choose-us">
+    <h2>Why Choose Us</h2>
+    <p>Extra ordinary taste and Experienced</p>
+    <p>High-Quality Ingredients – We use only the freshest and finest ingredients to bring out the best flavors in every dish.
+
+       <br> Exceptional Service – Our team is dedicated to making your experience smooth, enjoyable, and unforgettable.
+        
+       <br>
+        Fast & Fresh Delivery – Get your favorite meals delivered hot and fresh, right to your doorstep.</p>
+    <div class="why-choose-grid">
+        <div class="why-choose-item">
+            <img src="images/choosus1.png" alt="Fast Food Icon">
+            <p>Fast Food</p>
+        </div>
+        <div class="why-choose-item">
+            <img src="images/choosus2.png" alt="Lunch Icon">
+            <p>Lunch</p>
+        </div>
+        <div class="why-choose-item">
+            <img src="images/choosus3.png" alt="Dinner Icon">
+            <p>Dinner</p>
+        </div>
+    </div>
+    <p>30+ Years of Experienced</p>
+</section>
+
+<section class="stats">
+    <div class="stat-item">
+        <p>Professional Chefs</p>
+        <p>420</p>
+    </div>
+    <div class="stat-item">
+        <p>Items of Food</p>
+        <p>320</p>
+    </div>
+    <div class="stat-item">
+        <p>Years of Experienced</p>
+        <p>30+</p>
+    </div>
+    <div class="stat-item">
+        <p>Happy Customers</p>
+        <p>220</p>
+    </div>
+</section>
+
 <footer>
-    <div class="footer-content">
-        <p>&copy; 2024 Foodtuck. All rights reserved.</p>
-        <ul class="footer-links">
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h4>About Us</h4>
+            <p>Quality, speed, and taste are our priorities.</p>
+        </div>
+        
+        <div class="footer-section links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Our Menu</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section contact">
+            <h4>Contact Us</h4>
+            <p>Email: contact@foodtuck.com</p>
+            <p>Phone: +123 456 789</p>
+            <p>Location: Chavchavadze 83, Tbilisi city</p>
+        </div>
+
+        <div class="footer-section social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        &copy; 2024 Foodtuck. All rights reserved.
     </div>
 </footer>
 
-<script src="script.js"></script>
+
+<button id="scrollToTopBtn">↑</button>
+
+<script>
+// Instagram Media Fetching Code
+const userId = 'vk.ubilava'; 
+const accessToken = 'vk.ubilava';  
+
+const mediaUrl = `https://graph.instagram.com/${vk.ubilava}/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink&access_token=${accessToken}`;
+
+fetch(mediaUrl)
+  .then(response => response.json())
+  .then(data => {
+    const container = document.createElement('div'); 
+    container.classList.add('instagram-media-container'); 
+    document.body.appendChild(container);
+
+    data.data.forEach(item => {
+      const mediaElement = document.createElement('div');
+      const imageElement = document.createElement('img');
+      imageElement.src = item.media_url; 
+      mediaElement.appendChild(imageElement);
+      container.appendChild(mediaElement); 
+    });
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+</script>
+
+<script src="js/home.js"></script>
 </body>
 </html>
-
-

@@ -1,29 +1,58 @@
-// სთარ რეითინგ
+
+// ვარსკვალვის მონიშვნა
 const stars = document.querySelectorAll('.star');
 let selectedRating = 0;
 
-stars.forEach((star) => {
-    star.addEventListener('click', () => {
-        stars.forEach((s) => s.classList.remove('selected'));
-        star.classList.add('selected');
-        selectedRating = star.getAttribute('data-value');
+
+stars.forEach(star => {
+    star.addEventListener('click', function() {
+        selectedRating = this.getAttribute('data-value');
+        updateStarDisplay();
     });
 });
 
 
-const submitButton = document.getElementById('submit-review');
-const confirmationMessage = document.querySelector('.confirmation-message');
+function updateStarDisplay() {
+    stars.forEach(star => {
+        if (star.getAttribute('data-value') <= selectedRating) {
+            star.innerHTML = '&#9733;'; 
+        } else {
+            star.innerHTML = '&#9734;'; 
+        }
+    });
+}
 
-submitButton.addEventListener('click', () => {
+document.getElementById('submit-review').addEventListener('click', function() {
     const reviewText = document.getElementById('review-text').value;
-    const favoriteFood = document.getElementById('favorite-food').value;
-    const likedComponents = [...document.querySelectorAll('input[type="checkbox"]:checked')].map(cb => cb.value);
     const experience = document.querySelector('input[name="experience"]:checked')?.value;
+    const favoriteFood = document.getElementById('favorite-food').value;
 
-    if (!selectedRating || !experience || likedComponents.length === 0 || !reviewText) {
-        alert('Please complete all fields before submitting.');
+    if (selectedRating === 0 || !reviewText || !experience || !favoriteFood) {
+        alert('Please fill out all the fields!');
         return;
     }
 
-    confirmationMessage.textContent = `Thank you for your review! You rated us ${selectedRating} stars.`;
-});
+    const confirmationMessage = `
+        Thank you for your feedback!<br>
+        Rating: ${selectedRating} Stars<br>
+        Experience: ${experience}<br>
+        Favorite Dish: ${favoriteFood}<br>
+        Your Review: ${reviewText}
+    `;
+
+    document.querySelector('.confirmation-message').innerHTML = confirmationMessage;
+
+
+    resetForm();
+})
+
+
+function resetForm() {
+    stars.forEach(star => star.innerHTML = '&#9734;'); 
+    selectedRating = 0;
+    document.getElementById('review-text').value = '';
+    document.querySelector('input[name="experience"]:checked')?.checked = false;
+    document.getElementById('favorite-food').selectedIndex = 0;
+    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => checkbox.checked = false);
+}
+

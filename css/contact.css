@@ -1,73 +1,87 @@
-/* ბეისიქ სტილები */
 body {
-    font-family: sans-serif; 
+    font-family: Arial, sans-serif;
+    background-color: #121212;
     margin: 0;
-    background-color: #111; 
-    color: #eee; 
+    padding: 0;
+    color: white;
 }
 
-
 .contact-section {
-    font-family: sans-serif; 
-    font-family: sans-serif; 
     width: 50%;
-    color: #eee;
     margin: 50px auto;
+    background: black;
     padding: 20px;
-    background-color: #111;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
     text-align: center;
-    border-radius: 8px;
 }
 
 h2 {
     color: white;
 }
 
-p {
-    color: white;
-}
-
 .input-group {
-    margin: 15px 0;
+    margin-bottom: 15px;
     text-align: left;
 }
 
-label {
+.input-group label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
+    color:  white;
 }
 
-input, textarea {
+.input-group input,
+.input-group textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #555;
     border-radius: 5px;
-    font-size: 16px;
+    background: #222;
+    color: gray;
 }
 
-textarea {
-    height: 100px;
+.password-group {
+    position: relative;
+}
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: red;
+    transition: color 0.3s ease;
+}
+
+.eye-icon:hover {
+    color: gray;
 }
 
 button {
-    background: #ff6600;
+    background-color: orange;
     color: white;
-    border: none;
     padding: 10px 15px;
-    cursor: pointer;
-    font-size: 16px;
+    border: none;
     border-radius: 5px;
-    margin-top: 10px;
+    cursor: pointer;
 }
 
 button:hover {
-    background: #ff4500;
+    background-color: orange;
 }
 
 #form-message {
-    margin-top: 15px;
-    font-size: 14px;
-    color: green;
+    margin-top: 10px;
+    color: red;
+    font-weight: bold;
 }

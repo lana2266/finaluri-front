@@ -3,28 +3,50 @@ document.getElementById("contact-form").addEventListener("submit", function(even
 
     let name = document.getElementById("name").value.trim();
     let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
     let message = document.getElementById("message").value.trim();
     let formMessage = document.getElementById("form-message");
 
-    if (name === "" || email === "" || message === "") {
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    if (name === "" || email === "" || password === "" || message === "") {
+        formMessage.textContent = "All fields must be filled!";
         formMessage.style.color = "red";
-        formMessage.textContent = "Please fill in all fields.";
         return;
     }
 
-    if (!validateEmail(email)) {
+    if (!email.match(emailPattern)) {
+        formMessage.textContent = "Enter a valid email!";
         formMessage.style.color = "red";
-        formMessage.textContent = "Please enter a valid email address.";
         return;
     }
+
+    let passwordPattern = /^(?=.*\d)(?=.*[A-Z]).{8,}$/;
+
+    if (!password.match(passwordPattern)) {
+        formMessage.textContent = "Password must be at least 8 characters long, start with a capital letter, and contain at least one number!";
+        formMessage.style.color = "red";
+        return;
+    }
+
 
     formMessage.style.color = "green";
-    formMessage.textContent = "Thank you for your message! We will get back to you soon.";
-
-    this.reset(); 
+    formMessage.textContent = "Message sent successfully!";
+    this.reset();  
 });
 
-function validateEmail(email) {
-    let re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return re.test(email);
+
+function togglePassword() {
+    let passwordInput = document.getElementById("password");
+    let eyeIcon = document.getElementById("eye-icon");
+
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text"; 
+        eyeIcon.classList.remove("fa-eye");
+        eyeIcon.classList.add("fa-eye-slash");
+    } else {
+        passwordInput.type = "password"; 
+        eyeIcon.classList.remove("fa-eye-slash"); 
+        eyeIcon.classList.add("fa-eye");
+    }
 }
